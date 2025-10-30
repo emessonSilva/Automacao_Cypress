@@ -6,12 +6,14 @@ class Login {
   //classe
   visitarPagina() {
     //método do classe
-    cy.visit("/"); // acessa a URL base definida em "baseUrl" no arquivo config-dev.js
+    cy.visit('https://www.saucedemo.com/'); // acessa a URL base definida em "baseUrl" no arquivo config-dev.js
   }
 
   credenciaisValidas() {
-    cy.get(el.username).type(Cypress.env("username")); //utilizando chave-valor do objeto element (el.xxxxx) e tá puxando o username do arquivo config-dev.js para utilizar o env
-    cy.get(el.password).type(Cypress.env("password"));
+    cy.get(el.username).type('standard_user'); //utilizando chave-valor do objeto element (el.xxxxx) 
+    cy.get(el.password).type('secret_sauce');
+    // cy.get(el.username).type(Cypress.env("username")); //utilizando chave-valor do objeto element (el.xxxxx) e tá puxando o username do arquivo config-dev.js para utilizar o env
+    // cy.get(el.password).type(Cypress.env("password"));
     cy.get(el.loginButton).click();
   }
 
