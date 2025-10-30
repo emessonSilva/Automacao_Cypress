@@ -1,0 +1,25 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open:chrome": "npx cypress open --browser chrome",
+    "cy:run:chrome": "npx cypress run --browser chrome",
+    "clean": "npx rimraf cypress/screenshots && npx rimraf cypress/reports",
+    "cypress:open:dev": "npx cypress open --config-file config-dev.js --browser chrome",
+    "cypress:open:qa": "npx cypress open --config-file config-qa.js --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.5.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-multi-reporters": "^2.0.5",
+    "dotenv": "^17.2.3",
+    "mocha-junit-reporter": "^2.2.1",
+    "rimraf": "^6.0.1"
+  }
+}

@@ -1,0 +1,12 @@
+#arquivo para testar os testes no github actions
+
+name: End-to-end tests #nome do workflow
+on: push #triggers que faz com que aa pipeline abaixo seja executada sempre que o comando push for executado
+jobs:
+  cypress-run:
+    runs-on: ubuntu-24.04 #máquina self host do github (exemplo)
+    steps:
+      - name: Checkout #será feito um checkout do rep e informações do cód
+        uses: actions/checkout@v4
+      - name: Cypress run #execução dos testes
+        uses: cypress-io/github-action@v6
