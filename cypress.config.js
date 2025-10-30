@@ -18,6 +18,7 @@ module.exports = defineConfig({
   },
   chromeWebSecurity: false, //tirar erros do chrome
   experimentalStudio: true, //para utilizar o cypress studio
+  video: true, //gera vídeos dos testes
   e2e: {
     baseUrl: 'https://www.saucedemo.com/',
     setupNodeEvents(on, config) {
